@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradle</title>
+    <script>
+        let gradle = prompt("성적을 입력해주세요","1")
+      
+
+        if(gradle == null){
+            document.write("입력이 취소되었습니다.")
+        }
+        else{
+            if(parseInt(gradle)>=90){
+                document.write("A")
+            }else if(parseInt(gradle) >= 80 && parseInt(gradle) <90){
+                document.write("B")
+            }else if(parseInt(gradle) >= 70 && parseInt(gradle) < 80){
+                document.write("C")
+            }else if(parseInt(gradle) >= 60 && parseInt(gradle) < 70){
+                document.write("D")
+            }else if(parseInt(gradle) < 60){
+                document.write("F")
+            }
+            else{
+                document.write("너 문자구나")
+                console.log(typeof(gradle))
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
