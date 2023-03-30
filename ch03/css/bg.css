@@ -1,0 +1,22 @@
+.box{
+    width: 400px; 
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px ;
+    margin-left: 50px;
+    border-radius: 8px;
+}
+.menu{width: 400px;margin: 10px 20px 10px 50px;}
+li{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px 20px;  
+    border-radius: 8px;
+}
+#green:hover{background-color: green;}
+#black:hover{background-color: black;}
+#pink:hover{background-color: pink;}
+li:hover a{color: white;font-weight: bold;}
+a{text-decoration: none;color: black;}

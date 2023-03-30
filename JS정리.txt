@@ -1,0 +1,38 @@
+document.write()
+선택자 - class, id
+id = 'wrap'
+document.getElementById("wrap");
+
+함수(function, method)
+기능 - 입력, 출력, 사칙연산
+
+function (  메소드) {
+	실행문(변수, 제어문(if, for))
+
+    retun 리턴값 ;
+}
+
+입력 - prompt(),함수의 매개변수(파라미터)
+
+버튼을 클릭하면 호출
+funcgugu
+
+아이디 비번 체크
+fn_check.html
+
+절대값
+myabs
+
+반복문
+조건 - break - 함수 끝
+continue - 조건식일때의 조건만 빼고 실행 
+continue1.html
+
+배열(Araay)
+- 여러 개의 연속적인 값을 저장하는 자료형
+
+유형1
+let 배열이름 = [값1, 값2...]
+
+유형2
+let 배열이름 = new Array(4)
