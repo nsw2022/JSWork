@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 숨기기/보이기 이벤트 효과</title>
+    <!-- <script src="./js/04_show_hide2.js"></script> -->
+    <link rel="stylesheet" href="./css/04_event.css">
+    <script>
+        function hide(){
+            document.getElementById('min').style.display="none"
+            document.getElementById('btm').style.display="none"
+            document.getElementById('content_show').style.visibility="visible"
+            document.getElementById('top_h2').innerHTML="설명글 보이기"
+        }
+        function show(){
+            document.getElementById('min').style.display="block"
+            document.getElementById('btm').style.display="block"
+            document.getElementById('content_show').style.visibility="hidden"
+            document.getElementById('top_h2').innerHTML="설명글 숨기기"
+        }
+   
+    </script>
+    
+</head>
+<body>
+    
+    <a id="top_a" href="#" onclick="hide()" >
+        <div id="top" onclick="">
+            <h2 id="top_h2">설명글 숨기기</h2>
+        </div>
+    </a>
+    <div id="content">
+        <img src="../images/flower1.jpg" alt="">
+        <div id="content_show" onclick="show()">
+            <a href="#" ><p>상세 설명 보기</p></a>
+        </div>
+        <div id="min">
+        <h2>민들레</h2>
+
+        <p>
+            어디서나 매우 흔하게 보이는 잡초로써 바닥에 딱 붙어
+            서 꽃봉오리 하나가 쏙 올라온다 톱니 모양의 잎새와 눈
+            에 확 띄는 노락 꽃이 인상적이다. 특히 꽃이 지고 나면
+            솜털 모양의 깃을 가진 씨앗들이 나오는데 바람을 타고
+            날아가서 널리 퍼진다.
+        </p>
+        </div>
+
+        <button id="btm" onclick="hide()">상세 설명 닫기</button>
+        </div>
+    
+</body>
+</html>

@@ -24,7 +24,7 @@
         // 나이 = 현재년도 - 태어난 년도 + 1
         function calcAge(){
             const CURRENT_YEAR = 2023;
-            let birthYear =  prompt("출생년도를 입력해주세요","1").trim ;
+            let birthYear = parseInt( prompt("출생년도를 입력해주세요","1"));
             let age;// undifinde
 
             // isNaN(문자) -> true
@@ -33,7 +33,8 @@
                 console.log(typeof(birthYear))
             }else{
                 age = CURRENT_YEAR - parseInt(birthYear) + 1
-                document.getElementById('show').innerHTML = age
+                document.getElementById('show').innerHTML = 
+                "당신의 나이는 " +age + "세 이군요"
             }
 
             

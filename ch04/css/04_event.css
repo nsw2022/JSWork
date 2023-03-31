@@ -1,0 +1,26 @@
+
+#top{
+    width: 250px;
+    border: 1px solid brown;
+    text-align: center;
+    border-radius: 8px;
+    
+}
+#top_a{text-decoration: none;color:black}
+h2{font-weight: normal;}
+#content{
+    border: 1px solid #ccc;
+    width: 400px;
+    margin-top: 20px;
+    padding: 8px;
+}
+#content_show p{
+    position: absolute;
+    padding: 6px;
+    top: 350px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    
+}
+#content_show{visibility: hidden;}
+#content_show a{text-decoration: none;color:black}
