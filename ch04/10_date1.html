@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    <!-- data1이라고해서 여러개있는게아닌 예약어라 별도 분류하신듯 -->
+</head>
+<body>
+    <h2>Date 객체</h2>
+    <p>현재 날짜와 시간 표시</p>
+    <p id="demo"></p>
+
+    <p>특정한 날짜와 시간</p>
+    <p id="display"></p>
+
+    <script>
+        // 현재 날짜 생성(운영체제 시스템의 날짜와 시간)
+
+        const date = new Date()
+        // document.getElementById('demo').innerHTML = date.toLocaleString()
+        document.getElementById('demo').innerHTML = date.toLocaleDateString()
+        console.log(date.toLocaleDateString())
+        document.write(date)
+
+        // 특정한 날짜
+        const date2 = new Date("2023, 3, 16, 09, 30, 12")
+        // document.getElementById('display').innerHTML = date2.toLocaleString()
+        document.getElementById('display').innerHTML = date2.toLocaleDateString()
+        document.write("<br>")
+
+        // 날짜
+        document.write("현재 년도 : " + date.getFullYear()) // 년도출력
+        document.write("<br>")
+        document.write("현재 월 : " + date.getMonth()+1) // 월 출력 0부터 시작해서 1 더함
+        document.write("<br>")
+        document.write("현재 일 : " + date.getDate()) // 일 출력
+        document.write("<br>")
+        document.write("<br>")
+
+        // 시간
+        document.write("현재 시 :" + date.getHours() + "<br>") // 시
+        document.write("현재 분 :" + date.getMinutes() + "<br>") // 분
+        document.write("현재 초 :" + date.getSeconds() + "<br>" + "<br>") // 초
+
+        // 현재까지의 시간
+        document.write("현재까지 시간 : "+date.getTime()/1000 + "<br>")
+    </script>
+</body>
+</html>

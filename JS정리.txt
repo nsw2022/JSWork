@@ -46,3 +46,25 @@ let 배열이름 = new Array(4)
 메모리 위치가 다름
 
 scope-local.html
+
+배열 객체 (Array) 함수
+요소 추가
+numbers.push(10) - 맨뒤
+numbers.push() - 맨뒤
+요소 삭제
+numbers.unshift(10) - 맨앞
+numbers.push(10) - 맨앞
+특정한 위치 추가,삭제
+
+배열 요소 합치기 - concat
+배열 요소 연결하기 - join
+
+특정한 문자열의 첫번째 위치를 반환
+indexOf()
+lastIndexOf()
+webproj/bord/write.html <- 이런거할때 쓴다고하심
+
+주사위 2개를 만들어 10번던지기
+만약 8이 나오면 Eight Thrown
+11이 나오면 Eleven Thrown
+같으면 Double Thrown
