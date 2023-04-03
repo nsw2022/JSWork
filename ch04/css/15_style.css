@@ -1,0 +1,14 @@
+*{margin: 0 auto;}
+#container{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 400px;
+    text-align: center;
+    background-color: aquamarine;
+}
+#container h2,p{
+    position: relative;
+    top: 100px;
+}
+#day{font-size: 22px;color: red;font-weight: bold;}

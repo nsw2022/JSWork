@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자야구게임</title>
+
+</head>
+<body>
+    <!-- input text와 p태그를 이용해서 사용자한테 입력한 값의 결과를 보여줘야할꺼같음 -->
+    <!-- ex)321 (결과:n스트라이크 n볼/input아래p놔서 보여주려함)  -->
+    <!-- 비교로직이 애매함... index 방끼리 비교해봣자 의미가없음 -->
+    <!-- 볼/스트라이크 유무를 구별할꺼면 user[0]이랑 computer[0~2]까지 다비교해야함-->
+    <!-- user_arr에 input 받은거 차례대로 push 시켜서 -->
+    <!-- user_arr[0~2] 하나씩 computer[0~2]로 비교시키는게 베스트로 보임 -->
+
+    <input type="text" id="u_input">
+    <button onclick="input()" id="user">비교</button>
+    <p id="test"></p>
+    <script>
+        let computer = new Array(3)  // 컴퓨터 배열
+        let user_arr = new Array()  // 사람 배열
+        let num100=0 //백의자리 저장
+        let num10=0 //십의자리 저장
+        let num1=0  //일의자리 저장
+        let st=0    //스트라이크
+        let ball=0  //ball
+
+        
+
+
+        for (let i = 0; i < computer.length; i++) { // 배열만큼 반복
+            let rnd = Math.floor(Math.random() * 9) + 1 // 랜덤한 수를 뽑게 함
+            computer[i] = rnd;
+            for (let j = 0; j < i; j++) {
+                if (computer[i] === computer[j]) {
+                    i--;
+                    break; // 중복이 나왔음으로 j문을 종료함
+                }
+            }
+            
+        }//이시점에서 컴퓨터배열은 랜덤수 3개를 가지고있음
+
+        /*
+            i = 0  j 
+            i = 1  0
+            i = 2  0 1
+            i = 3  0 1 2
+        */
+        
+        console.log(computer) //콘솔값에 정답미리보기
+        function input(){ // 유저가 입력한 값 가져오는 테스트
+            let user = document.getElementById('u_input')
+            var input = user.value
+            // parseInt(input)
+
+            let num100 = parseInt( input.charAt(0) )
+            let num10 = parseInt( input.charAt(1) )
+            let num1 = parseInt( input.charAt(2) )
+            // document.getElementById('test').innerHTML=num100 + "<br>" + num10 + "<br>" + num1 // 잘나옴   
+            compare()
+            document.getElementById('test').innerHTML=st+"<br>"+ball
+        }
+
+        function compare(){
+            // 배열안에 자리가 맞다 스트라이크
+            // 아니다 볼
+            // 없다 ""출력
+            if(num100===computer.indexOf(0)){
+                st++
+            }else if(num100===computer.indexOf(1)){
+                ball++
+            }else if(num100===computer.indexOf(2)){
+                ball++
+            }
+            console.log(computer.indexOf(0))
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -68,3 +68,35 @@ webproj/bord/write.html <- 이런거할때 쓴다고하심
 만약 8이 나오면 Eight Thrown
 11이 나오면 Eleven Thrown
 같으면 Double Thrown
+==========================================================
+하나의 키(버튼)가 2가지 기능 - Toggle(토글)
+button onclick=showHide()
+function showHide(){
+    let sw = false // 상태 변수
+    if(조건식){
+        숨기기
+        sw = 1
+        sw true
+    }else{
+        보이기
+        sw = 0
+        sw = false
+    }
+}
+ch04>toggle
+
+let vs var 차이
+호이스트(hoist)
+자바스크립트는 선언문은 항시 자바스크립트 엔진 구동시 최우선으로 해석하고
+할당 구문은 런타임 과정에서 이뤄지기 때문에 호이스팅 되지 않음
+
+사용자 함수
+function showHide(){}
+사용자 객체 - 첫글자 대문자
+생성자함수(클래스)
+function ShowHide(){}
+
+let book = ["자바책","웹 교재","파이썬 책]
+
+객체 1개 - json (xml->json)
+let book = {'title':'반응형 웹',"writer":"김운아"}

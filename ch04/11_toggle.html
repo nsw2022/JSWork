@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글버튼기능</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <button type="button" onclick="showHide()" id="btn">숨기기</button>
+    
+    <div>
+        <img src="../images/flower1.jpg" alt="꽃" id="pic" style="margin-top: 16px;">
+    </div>
+    <script>
+        
+        let num = 0
+        // function showHide(){
+
+        //     if(num==0){
+        //         document.getElementById('pic').style.display="none"
+        //         document.getElementById('btn').innerHTML="보이기"
+        //         num=1
+        //     }else if(num==1){
+        //         document.getElementById('pic').style.display="inline-block"
+        //         document.getElementById('btn').innerHTML="숨기기"
+        //         num=0
+        //     }
+        // }
+
+        
+        function showHide(){
+            let img = document.getElementById('pic')
+            let btnText = document.getElementById('btn')
+            if(img.style.display=='block'){
+                img.style.display='none'
+                // document.getElementById('btn').innerHTML="보이기"
+                btnText.innerText="보이기"
+            }else{
+                img.style.display = 'block'
+                // document.getElementById('btn').innerHTML="숨기기"
+                btnText.innerText="숨기기"
+            }
+        }
+
+    </script>
+</body>
+</html>
