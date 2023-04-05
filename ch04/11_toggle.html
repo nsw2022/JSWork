@@ -20,7 +20,7 @@
     </div>
     <script>
         
-        let num = 0
+        // let num = 0
         // function showHide(){
 
         //     if(num==0){
@@ -33,21 +33,47 @@
         //         num=0
         //     }
         // }
-
         
+        let status = true // 상태 변수 - 전역(global)에 위치
         function showHide(){
-            let img = document.getElementById('pic')
-            let btnText = document.getElementById('btn')
-            if(img.style.display=='block'){
-                img.style.display='none'
-                // document.getElementById('btn').innerHTML="보이기"
-                btnText.innerText="보이기"
+            if(status){
+                document.getElementById('pic').style.display="none"
+                document.getElementById('btn').innerHTML="보이기"
+                status=false
             }else{
-                img.style.display = 'block'
-                // document.getElementById('btn').innerHTML="숨기기"
-                btnText.innerText="숨기기"
+                document.getElementById('pic').style.display="inline"
+                document.getElementById('btn').innerHTML="숨기기"
+                status=true
             }
         }
+     
+        /*
+            toggle 기능
+            let status = true
+
+            if(status){ // 조건이 상태변수
+                실행1
+                status = faulse
+            }else{
+                실행2
+                status = true
+            }
+        */
+
+        
+        // function showHide(){
+        //     let img = document.getElementById('pic')
+        //     let btnText = document.getElementById('btn')
+        //     if(img.style.display=='block'){
+        //         img.style.display='none'
+        //         // document.getElementById('btn').innerHTML="보이기"
+        //         btnText.innerText="보이기"
+        //     }else{
+        //         img.style.display = 'block'
+        //         // document.getElementById('btn').innerHTML="숨기기"
+        //         btnText.innerText="숨기기"
+        //     }
+        // }
 
     </script>
 </body>

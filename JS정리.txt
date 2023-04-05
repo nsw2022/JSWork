@@ -100,3 +100,28 @@ let book = ["자바책","웹 교재","파이썬 책]
 
 객체 1개 - json (xml->json)
 let book = {'title':'반응형 웹',"writer":"김운아"}
+===========================================================
+2차원 배열 2x3
+let arr - [
+    [1,2] , [3,4,5]
+]
+setInterval(기능(함수),시간(ms))
+clearInterval(객체)
+setTimeout(기능(함수),시간(ms))
+
+선택자 id = "sky"
+getElementById("sky")
+
+querySelector("#sky")
+querySelectorAll("#sky")
+
+1. 태그
+onclick = 함수이름()
+2.객체
+onclick, onmouseover
+
+addEventListener() - 여러이벤트
+
+객체의 속성 - 변경
+getAttribute()
+setAttribute()

@@ -58,23 +58,29 @@
             let num100 = parseInt( input.charAt(0) )
             let num10 = parseInt( input.charAt(1) )
             let num1 = parseInt( input.charAt(2) )
+            // user_arr.push(num100)
+            // user_arr.push(num10)
+            // user_arr.push(num1)
+            // console.log(user_arr)
+            // 입력받아서 index끼리 비교할까했는데 유저인덱스번호가 바껴서 힘들듯?
+
             // document.getElementById('test').innerHTML=num100 + "<br>" + num10 + "<br>" + num1 // 잘나옴   
+            console.log(computer.indexOf(num100))
             compare()
-            document.getElementById('test').innerHTML=st+"<br>"+ball
+            document.getElementById('test').innerHTML=st+"스트라이크"+"<br>"+ball+"볼"
         }
 
         function compare(){
             // 배열안에 자리가 맞다 스트라이크
             // 아니다 볼
             // 없다 ""출력
-            if(num100===computer.indexOf(0)){
+            if(computer.indexOf(num100)){
                 st++
-            }else if(num100===computer.indexOf(1)){
-                ball++
-            }else if(num100===computer.indexOf(2)){
+               
+            }else if(computer.indexOf(num100)!== -1){
                 ball++
             }
-            console.log(computer.indexOf(0))
+            
         }
         
         
