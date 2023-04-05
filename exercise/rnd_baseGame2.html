@@ -5,15 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숫자야구게임</title>
+    <style>
+        #wrapper{
+            background-color: aqua;
+            text-align: center;
+            width: 78%;
+            margin: 0 auto;
+        }
+        #head{
+            background-color: burlywood;
+            
+        }
+        #left{
+            background-color: blueviolet;
+            width: 49%;
+            float: left;
+            text-align: right;
+            padding-bottom: 8px;
+            padding-right: 4px;
+        }
+
+        #right{
+            background-color: chocolate;
+            float: left;
+            width: 49%;
+            text-align: left;
+            padding-bottom: 8px;
+            padding-left: 4px;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="answer">
-    <button onclick="checkAnswer()" id="user">비교</button>
-    <p id="test"></p>
+    <div id="wrapper">
+        <h1>숫자야구게임! 3자리!</h1>
+        <div id="head">
+            <input type="text" id="answer">
+            <button onclick="checkAnswer()" id="user">비교</button>
+        </div>
+        <div id="left">
+            <p id="arr_user_answer"></p> <!--유저답 -->
+        </div>
+        <div id="right">
+            <p id="test"></p> <!--유저답의 상태 답줄꺼 -->
+        </div>
+        <a onclick="window.location.reload()"><button style="display: none;" id="restart">다시고고?</button></a>
+    </div>
+    
+    
     <script>
         
         let computer = new Array(3)  // 컴퓨터 배열
-        let com100, com10, com1
+        let com100, com10, com1 // 자리수
+        let arr_test=[] // 화면 보여줄곳
+        let arr_user_answer = [] // 유저 답안 저장하고 보여주기
 
         // while(true){
 
@@ -43,10 +87,11 @@
             let input = document.getElementById('answer')
             let answer = input.value
             // console.log(typeof( answer))
-            // console.log( answer.length)
+            console.log( answer.length)
             
-            if(answer.length!=3){
+            if(answer.length!=3|| isNaN( answer)){
                 document.getElementById('test').innerHTML="잘못입력했어요"
+                return
             }
             let user100 = answer.charAt(0)
             let user10 = answer.charAt(1)
@@ -75,17 +120,19 @@
             else if(user1==compu100||user1==compu10) ball++
             
             if(strike===3){
-                // 여긴왜안들어오냐..
                 document.getElementById('test').innerHTML="정답입니다"
+                document.getElementById('arr_user_answer').style.display="none"
+                document.getElementById('restart').style.display="block"
             }else{
+                arr_user_answer.push(answer+"<br>")
+                arr_test.push(strike+"스트라이크 "+ball+"볼"+"<br>")
+                document.getElementById('test').innerHTML=arr_test.join("")
+                document.getElementById('arr_user_answer').innerHTML=arr_user_answer.join("")
 
-                document.getElementById('test').innerHTML=strike+"스트라이크 "+ball+"볼"
             }
 
 
-           
-
-            // 위에 와일문되면 이변수도 가능한데.. 세상 저게왜안됨??!?!?!?!?!
+            // 위에 와일문되면 이변수도 가능한데.. 세상 저게왜안됨??!?!?!?!?! 
             // if(user100==com100) strike++
             // else if(user100==com10||user100==com1) ball++
 
@@ -101,7 +148,7 @@
 
             // document.getElementById('test').innerHTML=strike+"스트라이크 "+ball+"볼"
         }
-    
     </script>
+    
 </body>
 </html>
