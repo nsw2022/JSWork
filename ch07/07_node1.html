@@ -18,15 +18,17 @@
         // 노드 추가 함수 - cteateElement()
         function myFunction(){
             let newLi = document.createElement("li")
-            let textNode = document.createTextNode("Water")
+            let textNode = document.createTextNode("qwerwqreqwer")
             newLi.appendChild(textNode) // li 에 Water를 연결(추가)
             // <li>Water</li>
 
             // <ul>안에 포함시키기
             let list = document.getElementById("myList")
-            list.appendChild(newLi) // 맨 아래 추가
+            // list.appendChild(newLi) // 맨 아래 추가
+            
 
-            // list.insertBefore(newLi,list.childNodes[0]) // 특정 위치에 추가
+            list.insertBefore(newLi,list.childNodes[1]) // 특정 위치에 추가 : 기준점 앞에 삽입!
+            
         }
     </script>
 

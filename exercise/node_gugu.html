@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 400px;
+            margin: 0 auto;
+            border:1px solid #ccc;
+        }
+        
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h2>구구단 4단</h2>
+        <label>단 입력 : <input type="text" id="input"> <input type="button" value="OK" onclick="Gogugu()"></label>
+        <div id="demo"></div>
+    </fieldset>
+
+    <script>
+        
+        function Gogugu(){
+            let strN=document.getElementById('input').value
+            let n = parseInt(strN)
+            for(i=1;i<10;i++){
+                let newDiv=document.createElement('div')  
+                let text = document.createTextNode(n+"x"+i+"="+(n*i))
+                newDiv.appendChild(text)
+                document.getElementById('demo').appendChild(newDiv)
+            }    
+        }
+    </script>
+</body>
+</html>

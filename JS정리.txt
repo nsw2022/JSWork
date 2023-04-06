@@ -125,3 +125,41 @@ addEventListener() - 여러이벤트
 객체의 속성 - 변경
 getAttribute()
 setAttribute()
+===========================================================
+javascript 언어 -> 웹에서 하는 역할
+CSS 역할 - 객체이름.style
+HTML 생성 - createElement(), createTextNode()
+
+HTML + CSS
+jQuery(제이쿼리) - 라이브러리 + 자바 스프링 프레임 워크
+
+window.onload() - 브라우저 실행될때 기능
+window.open()
+
+BOM = Browser of Model (window 객체)
+
+DOM = Dpci,emt of Model (document 객체)
+
+validatation(유효성)
+정규 표현식(Regular Expression)
+let str - new RegExp('/[0~9]/')
+let str - new RegExp('/[a-zA-Z]/')
+
+/[a-c]/ : a부터C까지
+/[abc]/ : 동문
+/^[a-c]/ : ^는 아니다
+
+RegExp
+/w3Schools/i - 대소문자 구분하지 않음
+test() - true/false
+
+각각 이벤트 함수 생성
+id 선택자 사용
+1. id="user-id" -> let id = document.getElementById("user-id")
+
+함수한개 생성
+2. name="user-id" let id = document.regForm.user-id // 폼이름
+
+location.href = "url"
+브라우저의 주소와 관련된 객체
+사이트나 문서를 지정할 수 있음
