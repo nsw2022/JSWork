@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 라이브러리</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        /* p{
+            font-weight: bold;
+        } */
+    </style>
+    <script>
+        // alert('hello~')
+        // $(document).ready(function(){
+        //     document.write("Hello")
+        // })
+        // window.onload = function(){
+        //     document.querySelector('h2').style.color='blue'
+        // }
+       $(document).ready(function(){
+        // $(선택자).css() 함수 사용
+        $('h2').css('color','red')
+        $('.intro').css('background','#0f0')
+        // $(선택자).next() 다음에 있는 요소 선택
+        // 여러개의 스타일 적용할때 객체 자료형 사용{속성:속성값}
+        // append - 요소안에 모든 태그들은 유지 시킨뒤 마지막부분에 추가
+        // html - 기존 선택된 요소안의 모든 태글들을 지우고 실행됨
+        $('.intro').next('p')
+                   .css({'font-size':'1.2em','color':'blue'})
+                   .append("<p>고맙습니다</p>")
+                   .append('<img src="./images/bear.jpg" alt="">')
+       })
+    </script>
+</head>
+<body>
+    <h2>어서오세요~ 방문을 환영합니다.</h2>
+    <p class="intro">내 이름은 김초엽 입니다.</p>
+    <p>나는 강남에 살고있어요.</p>
+
+    
+
+</body>
+</html>

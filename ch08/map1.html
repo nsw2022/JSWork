@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체 map() 함수</title>
+</head>
+<body>
+    <h2>map() 함수 - 새로운 배열을 생성해 줌</h2>
+    <p id="demo"></p>
+    <script>
+        // 객체 = {속성 : 속성값 }, 사용 . 연산자 접근
+        // let obj = {과일 : 'apple', 차 : 'sonata'}
+        // console.log(obj.과일)
+
+        const person =[
+            {이름 : 'Jobs',성 : 'steve'},
+            {이름 : '그래',성 : '장'},
+            {이름 : 'Gates',성 : 'Bull'}
+        ]
+        
+        for(i=0;i<person.length;i++){
+            console.log(person[i].성+" "+person[i].이름)
+        }
+
+        // mpa() 새로운 배열 생성
+        let array = person.map(myFunction)
+        console.log(array)
+
+        document.getElementById('demo').innerHTML = array
+
+        function myFunction(item){ // item - persons 각각의 요소
+            return [item.성, item.이름].join(" ")// 문자열을 구분기호로 구분
+        }
+
+        aa=[10,20,30,40,50,60,70]
+        var bb = aa.map(function(value){
+            return value + 3
+        })
+        document.write(aa+"<br>")
+        document.write(bb+"<br>")
+
+        aa.forEach( function(value,index,array){//자동 발동되는 이 함수의 파라미터로 "요소값, 인덱스번호, 배열객체"가 전달됨
+            document.write(index + " : " + value +"<br>");
+        } );
+
+    </script>
+</body>
+</html>
