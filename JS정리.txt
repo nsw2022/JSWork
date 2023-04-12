@@ -173,3 +173,22 @@ $(선택자).html("<img src...)
 
 요소안에 모든 태그들은 유지 시킨뒤 마지막부분에 추가
 $(선택자).append("<img src...)
+
+자바스크립트
+- getElementById(선택자) -> id
+- querySelector(선택자) -> 태그, class, id
+
+제이쿼리
+- $(선택자) - 태그, class, id
+.css("color","red")
+.click(function(){})
+.html("<p></p>")
+.text("안녕하세요")
+
+jQuery 유용한 매서드 모음 문자그대로임
+show Hide
+fadein fadeout
+slideup slidedown slidetoggle
+
+setAttribute('속성'속성값)
+attr('속성'속성값)

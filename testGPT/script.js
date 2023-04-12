@@ -4,6 +4,7 @@ while (answer.length < 4) {
     let digit = Math.floor(Math.random() * 10);
     if (!answer.includes(digit.toString())) {
         answer += digit;
+        console.log(digit)
     }
 }
 

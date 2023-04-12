@@ -29,6 +29,7 @@
         
     </ul>
     <script>
+        // 자바스크립트
         let list = document.querySelectorAll('.list')
         console.log( list )
         list[0].style.color = 'blue'        // 글자 색상
@@ -40,7 +41,9 @@
 
         // 제이쿼리
         $(document).ready(function(){
-            $('.list li:first-child').css('color','blue')
+            // $('.list li:first-child').css('color','blue')
+            // $(".list li:nth-of-type(1)").css('color','#00f')
+            $(".list li:nth-of-type(1)").css({'color':'#00f','font-weight':'bold'})
             // li가 순번이 짝수인 경우
             $('.list li:even').css('background','gray')
             // li가 순번이 홀수인 경우

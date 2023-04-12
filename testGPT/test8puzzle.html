@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>8 Puzzle Test</title>
+    <style>
+      /* 스타일은 선택 사항입니다. */
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .blank {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="puzzle">
+      <tr>
+        <td id="cell-0"></td>
+        <td id="cell-1"></td>
+        <td id="cell-2"></td>
+      </tr>
+      <tr>
+        <td id="cell-3"></td>
+        <td id="cell-4"></td>
+        <td id="cell-5"></td>
+      </tr>
+      <tr>
+        <td id="cell-6"></td>
+        <td id="cell-7"></td>
+        <td id="cell-8"></td>
+      </tr>
+    </table>
+
+    <script>
+      const initialState = [1, 2, 3, 4, 5, 8, 7, 6, 0]; // 초기 상태 배열
+      let state = [...initialState]; // 현재 상태 배열
+
+      function render() {
+        state.forEach((value, index) => {
+          const cell = document.querySelector(`#cell-${index}`);
+          if (value === 0) {
+            cell.innerText = '';
+            cell.classList.add('blank');
+          } else {
+            cell.innerText = value;
+            cell.classList.remove('blank');
+          }
+        });
+      }
+
+      function shuffle() {
+        // 배열을 랜덤하게 섞는 함수
+        for (let i = state.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state[i], state[j]] = [state[j], state[i]];
+        }
+        render();
+      }
+
+      function move(index) {
+        const blankIndex = state.indexOf(0);
+        const diff = index - blankIndex;
+        if (diff === -3 || diff === 3 || (diff === -1 && index % 3 !== 0) || (diff === 1 && index % 3 !== 2)) {
+          // 이동 가능한 위치인 경우
+          [state[index], state[blankIndex]] = [state[blankIndex], state[index]];
+          render();
+          if (JSON.stringify(state) === JSON.stringify(initialState)) {
+            alert('성공!');
+          }
+        }
+      }
+
+      // 초기 상태 렌더링
+      render();
+    </script>
+  </body>
+</html>
