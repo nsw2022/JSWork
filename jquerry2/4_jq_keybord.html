@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        body{font-size: 0.8em;}
+        textarea{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        textarea.on{
+            background-color: #FF6600;
+            color: white;
+        }
+        #display{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+        #display.on{
+            background-color: #FF6600;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div id="display"></div>
+    
+    <script>
+        $(function(){
+            // 키보드를 누를때 발생
+            $('textarea').keydown(function(){
+                $(this).addClass("on")
+                // 키업은 키보드를 떼었을때 발생
+            }).keyup(function(){    // textareadp 에 입력된 값 내용
+                let result = $(this).val()
+                $('#display').text(result)
+            })
+            
+        })
+    </script>
+</body>
+</html>
