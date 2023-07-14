@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글 클래스 바닐라스크립트 예제</title>
+    <style>
+         .text {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="myH">요소에 class 속성을 적용합니다.</h3>
+
+    <button onclick="add()">addClass</button>
+    <button onclick="remove()">removeClass</button>
+    <button onclick="toggle()">toggleClass</button>
+
+    <script>
+        function add() {
+            let element = document.querySelector(".myH");
+            element.classList.add("text");
+        }
+        
+        function remove() {
+            let element = document.querySelector(".myH");
+            element.classList.remove("text");
+        }
+        
+        function toggle() {
+            let element = document.querySelector(".myH");
+            element.classList.toggle("text");
+        }
+    </script>
+</body>
+</html>

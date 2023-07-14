@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>토글 클래스 제이쿼리 예제</title>
+    <style>
+        .text{
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h3>요소에 class 속성을 적용합니다.</h3>
+
+    <button id="btn1">addClass</button>
+    <button id="btn2">removeClass</button>
+    <button id="btn3">toggleClass</button>
+    <script>
+        $(function(){
+            $('#btn1').click(function(){
+                $('h3').addClass('text')
+            })
+
+            $('#btn2').click(function(){
+                $('h3').removeClass('text')
+            })
+
+            $('#btn3').click(function(){
+                $('h3').toggleClass('text')
+            })
+        })
+
+    </script>
+</body>
+</html>
